@@ -40,9 +40,13 @@
   }
   
   .nav-left a {
-    color: white;
+    background: #22E0DE;
+    background: linear-gradient(to right, #22E0DE 0%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 40px;
     display: block; 
     margin: 0 auto; 
   }
