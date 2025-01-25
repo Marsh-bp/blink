@@ -1,7 +1,7 @@
 <template>
   <div class="login-container">
     <div class="login-box">
-      <h2>Login</h2>
+      <h2 style="font-size: 30px;">Login</h2>
       <form @submit.prevent="handleLogin">
         <div class="form-group">
           <input type="email" v-model="email" placeholder="Email" required />
