@@ -1,7 +1,7 @@
 <template>
   <div class="signup-container">
     <div class="signup-box">
-      <h2>Signup</h2>
+      <h2 style="font-size: 30px;>Signup</h2>
       <form @submit.prevent="handleSignup">
         <div class="form-group">
           <input type="email" v-model="email" placeholder="Email" required />
