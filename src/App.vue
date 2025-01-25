@@ -8,7 +8,7 @@ import { ref, computed, onMounted } from 'vue';
 import { useToast } from 'vue-toastification';
 import { db } from '@/firebase/firebaseInit';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
-import { useRouter } from 'vue-router';
+import { RouterView, useRouter } from 'vue-router';
 import { v4 as uuidv4 } from 'uuid'; 
 
 const toast = useToast();
@@ -75,20 +75,9 @@ const logout = () => {
 </script>
 
 <template>
-  <div class="home-container">
-    <Navbar :onLogout="logout" />
-    <div class="container">
-      <Header />
-      <Balance :total="total" />
-      <div class="form-section">
-        <Add @transactionSubmitted="handleTransactionSubmission" />
-      </div>
-      <div class="list-section">
-        <List :transactions="transactions" @transactionDeleted="handleTransactionDeletion" />
-      </div>
-    </div>
-  </div>
+  <RouterView />
 </template>
+
 
 <style scoped>
 body {
