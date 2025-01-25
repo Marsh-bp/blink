@@ -13,16 +13,19 @@
 import { ref } from 'vue';
 import { signup } from '@/services/api';
 import { useToast } from 'vue-toastification';
+import { useRouter } from 'vue-router';
 
-const email = ref('');
-const password = ref('');
+const email = ref(''); 
+const password = ref(''); 
 const toast = useToast();
+const router = useRouter();
 
 const handleSignup = async () => {
   try {
     const user = await signup(email.value, password.value);
     localStorage.setItem('username', user.email);
     toast.success('Signup successful');
+    router.push('/'); 
   } catch (error) {
     toast.error(error.message || 'Signup failed');
   }

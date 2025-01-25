@@ -1,7 +1,65 @@
-<script setup></script>
-
 <template>
-    <nav>
-        
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-left">
+          <router-link to="/home">Home</router-link>
+        </div>
+        <div class="nav-right">
+          <button @click="onLogout">Logout</button>
+        </div>
+      </div>
     </nav>
-</template>
+  </template>
+  
+  <script setup>
+  import { defineProps } from 'vue';
+  
+  const props = defineProps({
+    onLogout: {
+      type: Function,
+      required: true
+    }
+  });
+  </script>
+  
+  <style scoped>
+  .navbar {
+    width: 100%;
+    background-color: #007BFF;
+    padding: 1em 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+  }
+  
+  .nav-left a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .nav-right button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-right button:hover {
+    background-color: #003d7a;
+  }
+  </style>
+  

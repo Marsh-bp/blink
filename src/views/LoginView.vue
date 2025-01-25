@@ -6,6 +6,7 @@
         <input type="password" v-model="password" placeholder="Password" required />
         <button type="submit">Login</button>
       </form>
+      <p>Don't have an account? <router-link to="/signup">Signup</router-link></p>
     </div>
   </template>
   
@@ -25,7 +26,7 @@
       const user = await login(email.value, password.value);
       localStorage.setItem('username', user.email);
       toast.success('Login successful');
-      router.push('/'); // Redirect to the home page
+      router.push('/home'); // Redirect to the home page
     } catch (error) {
       toast.error(error.message || 'Login failed');
     }
