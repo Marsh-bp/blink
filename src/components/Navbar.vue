@@ -2,7 +2,7 @@
     <nav class="navbar">
       <div class="nav-container">
         <div class="nav-left">
-          <router-link to="/home">Home</router-link>
+          <router-link to="/home">Blink</router-link>
         </div>
         <div class="nav-right">
           <button @click="onLogout">Logout</button>

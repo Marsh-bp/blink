@@ -1,33 +1,45 @@
+<script setup>
+import { defineProps } from 'vue';
+
+const props = defineProps({
+  total: {
+    type: Number,
+    required: true,
+  },
+});
+</script>
+
 <template>
-    <div class="balance">
-      <h3>Your Balance</h3>
-      <h1><span class="dollar-sign">$</span>{{ total }}</h1>
-    </div>
-  </template>
-  
-  <script setup>
-  import { computed } from 'vue';
-  import { ref } from 'vue';
-  
-  const total = ref(0);
-  
-  // Replace with your actual computation logic
-  // const total = computed(() => { return your_total_value; });
-  </script>
-  
-  <style scoped>
-  .balance {
-    text-align: center;
-    margin-bottom: 2em;
-  }
-  
-  .balance h1 {
-    font-size: 48px;
-    margin: 0;
-  }
-  
-  .dollar-sign {
-    color: green;
-  }
-  </style>
-  
+  <div class="balance-container">
+    <h4>Balance</h4>
+    <h1 id="balance"><span class="dollar-sign">$</span>{{ total }}</h1>
+  </div>
+</template>
+
+<style scoped>
+.balance-container {
+  text-align: center;
+  margin-top: 1em;
+  background: #f9f9f9;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.balance-container h4 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #007BFF;
+}
+
+.balance-container h1 {
+  margin: 0.5em 0 0;
+  font-size: 2.5em;
+  color: #333;
+}
+
+.dollar-sign {
+  color: green;
+  font-weight: bold;
+}
+</style>

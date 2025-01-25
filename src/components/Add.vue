@@ -49,7 +49,6 @@ const addTransaction = () => {
 </template>
 
 <style scoped>
-/* Form Container */
 #form {
   background: #fff;
   padding: 2em;
@@ -57,7 +56,6 @@ const addTransaction = () => {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Form Controls */
 .form-control {
   margin-bottom: 1em;
 }
@@ -69,7 +67,6 @@ const addTransaction = () => {
   color: #333;
 }
 
-/* Inputs */
 input[type="text"], input[type="number"], input[type="date"] {
   width: 100%;
   padding: 0.75em;
@@ -85,7 +82,6 @@ input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus {
   outline: none;
 }
 
-/* Button */
 .btn {
   background-color: #007BFF;
   color: #fff;
